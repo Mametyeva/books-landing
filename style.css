@@ -20,14 +20,14 @@
 
 @font-face {
     font-family: "Open Sans";
-    src: url(fonts/OpenSans-Light.woff);
+    src: url(fonts/OpenSans-Light.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url(fonts/OpenSans-Regular.woff);
+    src: url(fonts/OpenSans-Regular.ttf format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -61,7 +61,7 @@ button:hover {
 
 input {
     width: 100%;
-    line-height: 2.5;
+    line-height: 2.2;
     background: none;
     border: none;
     outline: none;
@@ -148,6 +148,7 @@ nav {
     height: 70px;
     z-index: 10;
     background-color: white;
+    box-shadow: 0 0 12px -4px #a8a8a8;
 }
 
 section {
@@ -209,7 +210,6 @@ header nav span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto auto 80px;
     width: 100%;
     height: 100vh;
     max-height: 1080px;
@@ -219,14 +219,6 @@ header nav span {
     background-size: cover;
     -o-background-size: cover;
 }
-
-/*.front {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    text-align: center;
-}*/
 
 .front-left {
     display: flex;
@@ -274,9 +266,9 @@ header nav span {
     height: 540px;
     padding: 25px;
     border: 1px solid white;
-    box-shadow: 0 0 20px -5px #eeeeee;
+    box-shadow: 0 0 20px -10px #cdcdcd;
     align-items: center;
-    text-align: center;
+    text-align: center;    
 }
 
 .cards {
@@ -327,8 +319,8 @@ header nav span {
 }
 
 .seach button {
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: auto;
     margin-left: 20px;
     background-color: transparent;
 }
@@ -337,6 +329,7 @@ button img {
     margin: auto;
     width: 100%;
     height: 100%;
+    vertical-align: bottom;
 }
 
 .block-bg {
@@ -362,12 +355,10 @@ button img {
 .sending-form button {
     padding: 1px 20px;
     margin-left: 20px;
-    margin-top: 20px;
 }
 
 .sending-form input {
     width: 400px;
-    padding-top: 10px;
 }
 
 .block-form-content {
@@ -385,7 +376,7 @@ button img {
 }
 
 .block-form form {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -469,8 +460,8 @@ footer > p {
     margin-top: 30px;
 }
 
-.text-border {
-    border: 3px solid;
+.gold-border {
+    border: 2px solid;
     border-image: linear-gradient(to bottom right, #F6B100 0%, #FFF3D6 50%, #C99100 100%);
     border-image-slice: 1;
 }
@@ -505,6 +496,12 @@ footer > p {
 
     .big_back .box {
         grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .sending-form button {
+        margin-top: 20px;
     }
 }
 
