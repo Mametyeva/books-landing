@@ -1,0 +1,534 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Alegreya";
+    src: url(fonts/Alegreya-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Alegreya";
+    src: url(fonts/Alegreya-Medium.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(fonts/OpenSans-Light.woff);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Open Sans";
+    font-weight: normal;
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    width: 130px;
+    height: 45px;
+    background-color: #C94949;
+    color: white;
+    border-radius: 0;
+    transition-property: border-radius;
+}
+
+button:hover {
+    background-color: #A54545;
+    border-radius: 30px;
+    transition: border-radius ease-in 200.ms;
+}
+
+input {
+    width: 100%;
+    line-height: 2.5;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #CDCDCD;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    display: block;
+    margin-block: 0em;
+    margin-inline: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    line-height: 1.55;
+    color: black;
+}
+
+p a {
+    color: #C94949;
+}
+
+ul {
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    font-family: "Alegreya", "Arial", serif;
+    font-size: 2.5em;
+    padding: 0.25em 0;
+}
+
+h2 {
+    font-family: "Alegreya", "Arial", serif;
+    font-weight: medium;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: "Alegreya", "Arial", serif;
+    font-weight: medium;
+    font-size: 1.4em;
+}
+
+h1, h2, h3 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    line-height: 1.25;
+}
+
+.caption {
+    font-size: 16px;
+    font-weight: 100;
+    color: #747474;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.box {
+    max-width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    background-color: white;
+}
+
+section {
+    margin-bottom: 100px;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav > .box {
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a {
+    padding: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav li a:hover {
+    color: #C94949;
+}
+
+header nav span {
+    margin: 0 10px;
+}
+
+.big_back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 80px;
+    width: 100%;
+    height: 100vh;
+    max-height: 1080px;
+    max-width: 1920px;
+    background-image: url(content/main-2.jpg);
+    background-position: top;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/*.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+}*/
+
+.front-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+    text-align: left;
+}
+
+.big_back .box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.front-left .subtitle {
+    margin-bottom: 15px;
+}
+
+.front-left > div {
+    margin-bottom: 40px;
+}
+
+.front-left button {
+    margin-bottom: 15px;
+}
+
+.advantages {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.advantage > div {
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.advantage img {
+    max-width: 48px;
+    margin-right: 30px;
+    object-fit: cover;
+}
+
+.card {
+    height: 540px;
+    padding: 25px;
+    border: 1px solid white;
+    box-shadow: 0 0 20px -5px #eeeeee;
+    align-items: center;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.card button {
+    margin-right: 15px;
+}
+
+.card-img {
+    margin: 0 auto;
+    width: auto;
+    height: 300px;
+}
+
+.card-img img {
+    height: 300px;
+}
+
+.price {
+    align-items: flex-end;
+}
+
+.price > p {
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.price .caption {
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+.card-buttons {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.seach {
+    max-width: 100%;
+    width: 500px;
+    margin: 30px auto;
+    align-items: flex-end;
+}
+
+.seach button {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: transparent;
+}
+
+button img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.block-bg {
+    background-color: white;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.block-form {
+    align-items: center;
+    box-shadow: 0 0 30px -5px #eeeeee;
+}
+
+.sending-form {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-block h2 {
+    text-align: center;
+}
+
+.sending-form button {
+    padding: 1px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.sending-form input {
+    width: 400px;
+    padding-top: 10px;
+}
+
+.block-form-content {
+    align-items: center;
+    max-width: 550px;
+    text-align: center;
+}
+
+.block-form-content .caption {
+    text-align: left;
+}
+
+.block-form h2 {
+    margin-bottom: 10px;
+}
+
+.block-form form {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.text-map {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.text-map h2 {
+    margin-bottom: 30px;
+}
+
+.map {
+    background-image: url("content/map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+    width: 100%;
+}
+
+footer {
+    text-align: right;
+    background-color: #3D3D3D;
+    width: 100%;
+    padding: 10px;
+}
+
+footer > p {
+    vertical-align: center;
+    color: darkgrey;
+}
+
+.text-picture .pic {
+    float: left;
+    max-width: 50%;
+    padding-right: 30px;
+}
+
+.text-picture::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.text-picture h2 {
+    margin: 5px 0;
+}
+
+.text-picture .description {
+    margin-top: 30px;
+}
+
+.text-picture .text-head {
+    padding-top: 20px;
+    position: relative;
+    left: -70px;
+}
+
+.text-picture div:nth-of-type(2) {
+    padding-top: 20px;
+}
+
+.advantage-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.advantage-picture h2 {
+    margin: 5px 0;
+}
+
+.advantage-picture .description {
+    margin-top: 30px;
+}
+
+.text-border {
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, #F6B100 0%, #FFF3D6 50%, #C99100 100%);
+    border-image-slice: 1;
+}
+
+.love {
+    position: relative;
+}
+
+.love:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/fire-gold.svg);
+    background-size: cover;
+}
+
+@media screen and (max-width: 400px) {
+    .sending-form input {
+        width: 340px;
+    }
+
+    .big_back {
+        background-position: 40% top;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .big_back .box {
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    
+    .advantages {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+
+    .text-map {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    .text-picture .pic {
+        float: none;
+        margin: 0 auto;
+        max-width: none;
+    }
+
+    .text-picture .text-head {
+        position: inherit;
+    }
+}
