@@ -28,20 +28,18 @@ let books = [
 ];
 
 let cards = document.querySelectorAll('.card');
-let cardName = document.querySelectorAll('.card .subtitle');
-let searchForm = document.querySelector('.seach input');
 let searchButton = document.querySelector('.seach button');
 
-let cards[i] = currentCard;
-searchButton.onclick = function () {
-    for (i = 0; i <= cards.length - 1; i++) {
+let searchElement = function (collection) {
+    let cardName = document.querySelectorAll('.card .subtitle');
+    let searchForm = document.querySelector('.seach input');
+    let card;
+    for (i = 0; i <= collection.length - 1; i++) {
         if (searchForm.value == cardName[i].textContent) {
-            currentCard.classList.add('gold-border');
-            alert(cardName[i].textContent);
-            break;
-        } else {
-            alert('Ничего не найдено, проверьте правильность написания запроса');
-            break;
+            card = collection[i];
         }
-    }
+    };
+    return card;
 };
+
+searchButton.onclick = searchElement(cards).classList.add('gold-border');
