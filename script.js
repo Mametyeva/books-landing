@@ -45,3 +45,22 @@ let searchElement = function (collection) {
 searchButton.addEventListener('click', function () {
     searchElement(cards).classList.add('gold-border');
 });
+
+let modalWindow = document.querySelector('.modal');
+let closeModalButton = modalWindow.querySelector('.modal .button-close');
+
+closeModalButton.addEventListener('click', function () {
+    modalWindow.classList.remove('modal--show');
+});
+
+document.addEventListener('keydown', function (evt) {
+    if (evt.key === 'Escape') {
+        modalWindow.classList.remove('modal--show');
+    }    
+});
+
+for (i = 0; i <= cards.length - 1; i++) {
+    cards[i].addEventListener('click', function () {
+        modalWindow.classList.add('modal--show');
+    });
+}
