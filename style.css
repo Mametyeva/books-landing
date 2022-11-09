@@ -93,7 +93,7 @@ ul {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
 }
 
@@ -161,11 +161,6 @@ section {
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-}
-
-.column-center {
     display: flex;
     flex-direction: column;
 }
@@ -480,6 +475,79 @@ footer > p {
     background-image: url(img/fire-gold.svg);
     background-size: cover;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0;
+    z-index: 9;
+}
+
+.modal--show {
+    display: block;
+}
+
+.modal-content {
+    padding: 80px;
+    background-color: #eeeeee;
+}
+
+.modal-content > div {
+    margin-right: 50px;
+    width: 250px;
+}
+
+.modal__button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+}
+  
+  .modal__button::after,
+  .modal__button::before {
+    content: "";
+  
+    position: absolute;
+    right: 0;
+    top: 20px;
+  
+    width: 26px;
+    height: 6px;
+    margin: -13px -3px;
+  
+    background-color: #7656de;
+  }
+  
+  .modal__button::before {
+    transform: rotate(45deg);
+  }
+  
+  .modal__button::after {
+    transform: rotate(-45deg);
+  }
+  
+  .modal__button:hover::after,
+  .modal__button:hover::before,
+  .modal__button:focus::after,
+  .modal__button:focus::before {
+    background-color: #9b7ff7;
+  }
+  
+  .modal__button:active::after,
+  .modal__button:active::before {
+    background-color: #4023a0;
+  }
+  
 
 @media screen and (max-width: 400px) {
     .sending-form input {

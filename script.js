@@ -42,4 +42,6 @@ let searchElement = function (collection) {
     return card;
 };
 
-searchButton.onclick = searchElement(cards).classList.add('gold-border');
+searchButton.addEventListener('click', function () {
+    searchElement(cards).classList.add('gold-border');
+});
