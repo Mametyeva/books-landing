@@ -90,6 +90,8 @@ p a {
 ul {
     padding-inline-start: 0;
     list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 img {
@@ -179,15 +181,20 @@ section {
 
 nav > .box {
     align-items: center;
+    margin: 12px auto;
 }
 
 nav ul {
     display: flex;
-    justify-content: space-between;
+}
+
+.logo {
+    display: block;
 }
 
 nav li a {
     padding: 10px;
+    display: block;
     color: black;
     text-transform: uppercase;
     font-size: 14px;
@@ -258,7 +265,7 @@ header nav span {
 }
 
 .card {
-    min-height: 460px;
+    min-height: 480px;
     max-height: 540px;;
     padding: 25px;
     border: 1px solid white;
@@ -275,19 +282,22 @@ header nav span {
 
 .card button {
     width: 100%;
+    display: none;
+    margin-top: 12px;
 }
 
-.hidden {
-    display: none;
+.card:hover .card-btn {
+    display: block;
+}
+
+.card:hover .card-img {
+    width: 194px;
 }
 
 .card-img {
     margin: 0 auto;
+    margin-bottom: 12px;
     width: auto;
-    height: 300px;
-}
-
-.card-img img {
     height: 300px;
 }
 
@@ -449,7 +459,6 @@ footer > p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-wrap: nowrap;
 }
 
 .advantage-picture h2 {
@@ -491,6 +500,7 @@ footer > p {
     background-color: #eeeeee;
     margin: 0;
     z-index: 9;
+    overflow-y: scroll;
 }
 
 .modal--show {
@@ -560,6 +570,31 @@ footer > p {
     border: none;
 }
 
+.collaps-menu {
+    position: relative;
+    display: none;
+}
+
+.burger {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.burger-content {
+    display: none;
+    position: absolute;
+    width: max-content;
+    top: 30px;
+    left: 0;
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+.collaps-menu:hover .burger-content {
+    display: block;
+}
+
 @media screen and (max-width: 400px) {
     .sending-form input {
         width: 340px;
@@ -608,6 +643,15 @@ footer > p {
         width: 80%;
     }
 
+    .advantage-picture {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .advantage-picture.second {
+        flex-direction: column-reverse;
+    }
+
     .text-map {
         grid-template-columns: 1fr;
     }
@@ -623,5 +667,13 @@ footer > p {
 
     .text-picture .text-head {
         position: inherit;
+    }
+
+    .collaps-menu {
+        display: block;
+    }
+
+    .collaps-menu ~ ul {
+        display: none;
     }
 }

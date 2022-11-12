@@ -19,8 +19,16 @@
     <header>
       <nav>
         <div class="box row-between">
-          <ul><img src="img/logo.svg" alt="logo"></ul>
-          <ul>
+          <ul class="logo"><img src="img/logo.svg" alt="logo"></ul>
+          <ul class="collaps-menu">
+            <div class="burger"><img src="img/udobstvo.svg"></div>
+            <ul class="burger-content">
+              <li><a href="">Главная</a></li>
+              <li><a href="">Не главная</a></li>
+              <li><a href="">Почти главная</a></li>
+            </ul>
+          </ul>
+          <ul class="menu-items">
             <li><a href="">Главная</a></li>
             <li><a href="">Не главная</a></li>
             <li><a href="">Почти главная</a></li>
@@ -78,10 +86,10 @@
           <h2>Книга - лучший подарок</h2>
           <p class="description">Твердая обложка с фольгированным тиснением не только красиво смотрится, она также очень прочна и практична. Такая книга станет отличным подарком для любителей чтения.</p>
         </div>
-        <div class="pic"><img src="content/envelop-border.png" alt="Писатель"></div>
+        <div class="pic"><img src="content/envelop-border.png" alt="обложка книги Финансист"></div>
       </section>
-      <section class="advantage-picture box">
-        <div class="pic"><img src="content/pages-border.png" alt="Писатель"></div>
+      <section class="advantage-picture second box">
+        <div class="pic"><img src="content/pages-border.png" alt="разворот книги"></div>
         <div class="content">
           <h2>Читай с комфортом</h2>
           <p class="description">Плотная бумага цвета слоновой кости и комфортный шрифт подобраны специально с заботой о наших читателях. От этих страниц можно не отрываться часами.</p>
@@ -103,7 +111,7 @@
               <p class="old-price caption">350p</p>
               <p class="value-price">300p</p>
             </div>
-            <button class="hidden">Купить</button>
+            <button class="card-btn">Купить</button>
           </div>
           <div class="card col-between">
             <div class="card-img"><img class="photo" src="content/Ayvengo 1.jpg" alt="Айвенго"></div>
@@ -113,7 +121,7 @@
               <p class="old-price caption">350p</p>
               <p class="value-price">300p</p>
             </div>
-            <button class="hidden">Купить</button>
+            <button class="card-btn">Купить</button>
           </div>
           <div class="card col-between">
             <div class="card-img"><img class="photo" src="content/Master-i-Margarita 1.jpg" alt="Мастер и Маргарита"></div>
@@ -123,7 +131,7 @@
               <p class="old-price caption">350p</p>
               <p class="value-price">300p</p>
             </div>
-            <button class="hidden">Купить</button>
+            <button class="card-btn">Купить</button>
           </div>
           <div class="card col-between love">
             <div class="card-img"><img class="photo" src="content/Spisok-Shindlera 1.jpg" alt="Список Шиндлера"></div>
@@ -133,7 +141,7 @@
               <p class="old-price caption">350p</p>
               <p class="value-price">300p</p>
             </div>
-            <button class="hidden">Купить</button>
+            <button class="card-btn">Купить</button>
           </div>
         </div>
       </section>
