@@ -94,7 +94,7 @@ ul {
 
 img {
     width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 h1 {
@@ -258,7 +258,8 @@ header nav span {
 }
 
 .card {
-    height: 540px;
+    min-height: 460px;
+    max-height: 540px;;
     padding: 25px;
     border: 1px solid white;
     box-shadow: 0 0 20px -10px #cdcdcd;
@@ -268,12 +269,16 @@ header nav span {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(244px, 1fr));
     gap: 10px;
 }
 
 .card button {
-    margin-right: 15px;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
 }
 
 .card-img {
@@ -483,7 +488,7 @@ footer > p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #eeeeee;
     margin: 0;
     z-index: 9;
 }
@@ -493,8 +498,10 @@ footer > p {
 }
 
 .modal-content {
-    padding: 80px;
-    background-color: #eeeeee;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: 100vh;
+    flex-wrap: wrap;
 }
 
 .modal-content > div {
@@ -521,8 +528,8 @@ footer > p {
     right: 0;
     top: 20px;
   
-    width: 26px;
-    height: 6px;
+    width: 20px;
+    height: 3px;
     margin: -13px -3px;
   
     background-color: #7656de;
@@ -548,6 +555,10 @@ footer > p {
     background-color: #4023a0;
   }
   
+  .modal__button:hover {
+    background-color: transparent;
+    border: none;
+}
 
 @media screen and (max-width: 400px) {
     .sending-form input {
@@ -570,6 +581,23 @@ footer > p {
 @media screen and (max-width: 570px) {
     .sending-form button {
         margin-top: 20px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
+    }
+
+    .card, .card-img, .card-img img {
+        height: auto;
+        min-height: 0;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .card button {
+        display: block;
     }
 }
 

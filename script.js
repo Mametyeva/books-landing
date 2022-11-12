@@ -1,32 +1,3 @@
-let title = document.querySelector('h1');
-title.onclick = function () {
-    console.log("it`s work!");
-    alert("hello");
-}
-
-let books = [
-    {
-        name: 'Портрет Дориана Грея',
-        autor: 'Оскар Уаильд',
-        cost: '350'
-    },
-    {
-        name: 'Айвенго',
-        autor: 'Вальтер Скотт',
-        cost: '350'
-    },
-    {
-        name: 'Мастер и Маргарита',
-        autor: 'Михаил Булгаков',
-        cost: '350'
-    },
-    {
-        name: 'Список Шиндлера',
-        autor: 'Томас Кенилли',
-        cost: '350'
-    }
-];
-
 let cards = document.querySelectorAll('.card');
 let searchButton = document.querySelector('.seach button');
 
@@ -49,6 +20,25 @@ searchButton.addEventListener('click', function () {
 let modalWindow = document.querySelector('.modal');
 let closeModalButton = modalWindow.querySelector('.modal .button-close');
 
+let openModalWindow = function (product, image, name, autor) {
+    let modalImg = modalWindow.querySelector('.modal-photo');
+    let modalProductName = modalWindow.querySelector('.modal .subtitle');
+    let modalProductAutor = modalWindow.querySelector('.modal .caption');
+    product.addEventListener('click', function () {
+        modalWindow.classList.add('modal--show');
+        modalImg.src = image;
+        modalProductName.textContent = name.textContent;
+        modalProductAutor.textContent = autor.textContent;
+    });
+}
+
+for (i = 0; i <= cards.length - 1; i++) {
+    let productImg = document.querySelectorAll('.photo');
+    let productName = document.querySelectorAll('.card .card-name');
+    let productAutor = document.querySelectorAll('.card .card-autor');
+    openModalWindow(cards[i], productImg[i].src, productName[i], productAutor[i]);
+};
+
 closeModalButton.addEventListener('click', function () {
     modalWindow.classList.remove('modal--show');
 });
@@ -58,9 +48,3 @@ document.addEventListener('keydown', function (evt) {
         modalWindow.classList.remove('modal--show');
     }    
 });
-
-for (i = 0; i <= cards.length - 1; i++) {
-    cards[i].addEventListener('click', function () {
-        modalWindow.classList.add('modal--show');
-    });
-}
