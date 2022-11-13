@@ -696,7 +696,9 @@ footer > p {
     .collaps-menu ~ ul {
         display: none;
     }
+}
 
+@media screen and (min-width: 840px) {
     .card:hover .card-img {
         width: 194px;
     }

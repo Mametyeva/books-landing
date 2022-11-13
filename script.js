@@ -1,9 +1,9 @@
 let cards = document.querySelectorAll('.card');
 let searchButton = document.querySelector('.seach button');
+let searchForm = document.querySelector('.seach input');
 
 let searchElement = function (collection) {
     let cardName = document.querySelectorAll('.card .subtitle');
-    let searchForm = document.querySelector('.seach input');
     let card;
     for (i = 0; i <= collection.length - 1; i++) {
         if (searchForm.value == cardName[i].textContent) {
@@ -15,6 +15,7 @@ let searchElement = function (collection) {
 
 searchButton.addEventListener('click', function () {
     searchElement(cards).classList.add('gold-border');
+    searchForm.value = '';
 });
 
 let modalWindow = document.querySelector('.modal');
