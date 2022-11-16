@@ -607,6 +607,61 @@ footer > p {
     display: block;
 }
 
+.chat-content {
+    display: grid;
+    align-content: end;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    flex-grow: 1;
+    padding: 15px 20px 24px 0px;
+    background-color: #ffffff;
+}
+
+.chat-message {
+    display: flex;
+    max-width: max-content;
+}
+
+.chat-message-text {
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px 20px 20px 4px;
+    margin-left: 20px;
+    padding: 3px 20px 15px;
+}
+  
+.chat-message-name {
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    color: #6994ba;
+}
+
+.chat-form {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+.chat h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.chat-form button {
+    padding: 1px 20px;
+    width: 150px;
+}
+  
+.chat-form input {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.chat-photo {
+    width: 50px;
+}
+
 @media screen and (max-width: 400px) {
     .sending-form input {
         width: 100%;

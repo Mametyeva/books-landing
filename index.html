@@ -81,7 +81,8 @@
         </div>
       </section>
 
-      <!--<section class="advantage-picture box">
+      <!-- Блоки фото-текст. Еще не поняла, нужны они на странице или нет
+      <section class="advantage-picture box">
         <div class="content">
           <h2>Книга - лучший подарок</h2>
           <p class="description">Твердая обложка с фольгированным тиснением не только красиво смотрится, она также очень прочна и практична. Такая книга станет отличным подарком для любителей чтения.</p>
@@ -157,7 +158,7 @@
               <p class="value-price">300p</p>
             </div>
             <button type="button">Купить</button>
-            <button class="modal__button button-close" type="button">Закрыть</button>
+            <button class="modal__button button-close" type="submit">Закрыть</button>
           </div>
         </div>
       </section>
@@ -176,6 +177,37 @@
           </div>
         </div>
       </section>
+
+      <section class="chat">
+        <div class="box">
+          <h2>Отзывы наших читателей</h2>
+          <div class="chat-content">
+            <div class="chat-message" tabindex="0">
+              <div>
+                <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+                <span class="chat-message-name caption">Гость</span>
+              </div>
+              <p class="chat-message-text">Такую книгу сразу хочется читать и не отрываться, прочла Войну и Мир на одном дыхании,
+                все благодаря удобному шрифту и приятным страницам (не проплаченный отзыв, нет-нет)</p>
+            </div>
+          </div>
+          <form class="chat-form line" action="" method="post">
+            <input class="chat-form-input caption" type="text" aria-label="Ваше сообщение" placeholder="Напишите что-нибудь" required>
+            <button class="chat-form-button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <template id="message-template">
+        <div class="chat-message" tabindex="0">
+          <div>
+            <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+            <span class="chat-message-name caption">Гость</span>
+          </div>
+          <p class="chat-message-text"></p>
+        </div>
+      </template>
+
       <section class="text-map box" id="contakts">
         <div class="map"></div>
         <div>

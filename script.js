@@ -40,7 +40,8 @@ for (i = 0; i <= cards.length - 1; i++) {
     openModalWindow(cards[i], productImg[i].src, productName[i], productAutor[i]);
 };
 
-closeModalButton.addEventListener('click', function () {
+closeModalButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
     modalWindow.classList.remove('modal--show');
 });
 
@@ -48,4 +49,19 @@ document.addEventListener('keydown', function (evt) {
     if (evt.key === 'Escape') {
         modalWindow.classList.remove('modal--show');
     }    
+});
+
+let list = document.querySelector('.chat-content');
+let messageTemplate = document.querySelector('#message-template').content;
+let newMessage = messageTemplate.querySelector('.chat-message');
+let input = document.querySelector('.chat-form-input')
+let form = document.querySelector('.chat-form');
+
+form.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  var youTemplate = newMessage.cloneNode(true);
+  var youMessage = youTemplate.querySelector('p');
+  youMessage.textContent = input.value; 
+  list.appendChild(youTemplate);
+  input.value = '';
 });
