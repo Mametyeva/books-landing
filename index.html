@@ -21,7 +21,7 @@
         <div class="box row-between">
           <ul class="logo"><img src="img/logo.svg" alt="logo"></ul>
           <ul class="collaps-menu">
-            <div class="burger"><img src="img/udobstvo.svg"></div>
+            <div class="burger"><img src="img/menu.svg"></div>
             <ul class="burger-content">
               <li><a href="#">Главная</a></li>
               <li><a href="#catalog">Товары</a></li>
@@ -45,12 +45,14 @@
           <div class="front-left">
             <h1>“Яркие страницы” - любимая классика в новом переплете</h1>
             <p class="subtitle">Скидка 30% на все книги серии до 1 января</p>
-            <button>Кнопка</button>
+            <form action="#catalog">
+              <button>В каталог</button>
+             </form>
           </div>
         </div>
       </section>
       <section class="text-picture box">
-        <div class="pic"><img src="content/books-border.png" alt="Писатель"></div>
+        <div class="pic"><img src="content/books-bright-pages.jpg" alt="Писатель"></div>
         <div>
           <p class="subtitle">Коллекционное издание от издательства “Эксмо”</p>
           <h2>“Яркие страницы” - новое прочтение неустаревающей классики</h2>
@@ -81,7 +83,8 @@
         </div>
       </section>
 
-      <!--<section class="advantage-picture box">
+      <!-- Блоки фото-текст. Еще не поняла, нужны они на странице или нет
+      <section class="advantage-picture box">
         <div class="content">
           <h2>Книга - лучший подарок</h2>
           <p class="description">Твердая обложка с фольгированным тиснением не только красиво смотрится, она также очень прочна и практична. Такая книга станет отличным подарком для любителей чтения.</p>
@@ -157,7 +160,7 @@
               <p class="value-price">300p</p>
             </div>
             <button type="button">Купить</button>
-            <button class="modal__button button-close" type="button">Закрыть</button>
+            <button class="modal__button button-close" type="submit">Закрыть</button>
           </div>
         </div>
       </section>
@@ -176,6 +179,51 @@
           </div>
         </div>
       </section>
+
+      <section class="chat">
+        <div class="box">
+          <h2>Отзывы наших читателей</h2>
+          <div class="chat-content">
+            <div class="chat-message" tabindex="0">
+              <div>
+                <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+                <span class="chat-message-name caption">Мария</span>
+              </div>
+              <p class="chat-message-text">Такую книгу сразу хочется читать и не отрываться, прочла Войну и Мир на одном дыхании,
+                все благодаря удобному шрифту и приятным страницам (не проплаченный отзыв)</p>
+            </div>
+            <div class="chat-message" tabindex="0">
+              <div>
+                <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+                <span class="chat-message-name caption">Виктория</span>
+              </div>
+              <p class="chat-message-text">Отличная серия, побольше бы таких книг! Теперь на другие издания даже не смотрю.</p>
+            </div>
+            <div class="chat-message" tabindex="0">
+              <div>
+                <div class="chat-photo"><img src="img/human.svg" alt="аватар"></div>
+                <span class="chat-message-name caption">Гость</span>
+              </div>
+              <p class="chat-message-text">Хорошие книжки. В соотношении цена-качество, лучше, думаю, не найти.</p>
+            </div>
+          </div>
+          <form class="chat-form line" action="" method="post">
+            <input class="chat-form-input caption" type="text" aria-label="Ваше сообщение" placeholder="Напишите что-нибудь" required>
+            <button class="chat-form-button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <template id="message-template">
+        <div class="chat-message" tabindex="0">
+          <div>
+            <div class="chat-photo"><img src="img/human.svg" alt="аватар"></div>
+            <span class="chat-message-name caption">Гость</span>
+          </div>
+          <p class="chat-message-text"></p>
+        </div>
+      </template>
+
       <section class="text-map box" id="contakts">
         <div class="map"></div>
         <div>
@@ -185,6 +233,9 @@
           <p>пн-пт 9 - 21ч</p>
         </div>
       </section>
+      <div class="button-wrapper">
+        <div><button type="button" id="my-button">Button</button></div>
+      </div>
     </main>
     <footer>
       <p class="box">

@@ -47,16 +47,16 @@ button {
     border: none;
     width: 130px;
     height: 45px;
-    background-color: #C94949;
-    color: white;
-    border-radius: 0;
-    transition-property: border-radius;
+    background-color: transparent;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    transition-property: all 0.2s ease-in;
 }
 
 button:hover {
-    background-color: #A54545;
-    border-radius: 30px;
-    transition: border-radius ease-in 200.ms;
+    border-color:#3BB78E;
+    color: #3BB78E;
 }
 
 input {
@@ -84,7 +84,7 @@ p {
 }
 
 p a {
-    color: #C94949;
+    color: #3BB78E;
 }
 
 ul {
@@ -102,7 +102,6 @@ img {
 h1 {
     font-family: "Alegreya", "Arial", serif;
     font-size: 2.5em;
-    padding: 0.25em 0;
 }
 
 h2 {
@@ -119,7 +118,7 @@ h3 {
 h1, h2, h3 {
     margin-block-start: 0em;
     margin-block-end: 0em;
-    line-height: 1.25;
+    line-height: 1.15;
 }
 
 .caption {
@@ -146,7 +145,6 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;
     z-index: 10;
     background-color: white;
     box-shadow: 0 0 12px -4px #a8a8a8;
@@ -189,6 +187,7 @@ nav ul {
 
 .logo {
     display: block;
+    width: 100px;
 }
 
 nav li a {
@@ -200,7 +199,7 @@ nav li a {
 }
 
 nav li a:hover {
-    color: #C94949;
+    color: #3BB78E;
 }
 
 header nav span {
@@ -227,15 +226,16 @@ header nav span {
     align-items: flex-start;
     z-index: 2;
     text-align: left;
+    margin-top: 60px;
 }
 
 .big_back .box {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .front-left .subtitle {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .front-left > div {
@@ -243,7 +243,7 @@ header nav span {
 }
 
 .front-left button {
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .advantages {
@@ -335,7 +335,7 @@ header nav span {
 .seach {
     max-width: 100%;
     width: 500px;
-    margin: 30px auto;
+    margin: 40px auto 30px;
     align-items: flex-end;
 }
 
@@ -343,7 +343,7 @@ header nav span {
     width: 36px;
     height: auto;
     margin-left: 20px;
-    background-color: transparent;
+    border: none;
 }
 
 button img {
@@ -362,6 +362,7 @@ button img {
 .block-form {
     align-items: center;
     box-shadow: 0 0 30px -5px #eeeeee;
+    background-image: linear-gradient(45deg, #FFF8DE, #F5FCA6, #3BB78E)
 }
 
 .sending-form {
@@ -397,7 +398,7 @@ button img {
 }
 
 .block-form form {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -436,7 +437,7 @@ footer > p {
 .text-picture .pic {
     float: left;
     max-width: 50%;
-    padding-right: 30px;
+    padding-right: 50px;
 }
 
 .text-picture::after {
@@ -504,7 +505,7 @@ footer > p {
 .modal {
     display: none;
     position: fixed;
-    top: 70px;
+    top: 60px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -607,21 +608,96 @@ footer > p {
     display: block;
 }
 
-@media screen and (max-width: 400px) {
+.chat-content {
+    display: grid;
+    align-content: end;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    flex-grow: 1;
+    padding: 15px 20px 24px 0px;
+    background-color: #ffffff;
+}
+
+.chat-message {
+    display: flex;
+    max-width: max-content;
+}
+
+.chat-message-text {
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 20px 20px 5px;
+    margin-left: 20px;
+    padding: 15px 20px;
+    height: max-content;
+    background-image: linear-gradient(45deg, #FFF8DE, #F5FCA6, #62E2B8);
+}
+  
+.chat-message-name {
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    color: #6994ba;
+}
+
+.chat-form {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+.chat h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.chat-form button {
+    padding: 1px 20px;
+    width: 150px;
+}
+  
+.chat-form input {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.chat-photo {
+    width: 50px;
+}
+
+.chat-photo img {
+    border-radius: 5px;
+}
+
+.button-wrapper {
+    height: 300px;
+    padding: 50px;
+    border: 1px solid grey;
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    position: relative;
+}
+
+#my-button {
+    position: absolute;
+    transition: all 0.07s linear 0s;
+}
+
+@media screen and (max-width: 480px) {
     .sending-form input {
         width: 100%;
     }
 
-    .big_back {
-        background-position: 40% top;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
     .big_back .box {
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 1fr;
+    }
+
+    .big_back {
+        background-image: url(content/main-mobile.jpg);
+    }
+
+    .front-left {
+        margin-top: 0px;
     }
 }
 
@@ -695,5 +771,17 @@ footer > p {
 
     .collaps-menu ~ ul {
         display: none;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .big_back {
+        background-position: center 30px;
     }
 }
