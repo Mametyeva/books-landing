@@ -678,11 +678,6 @@ footer > p {
     position: relative;
 }
 
-#my-button {
-    position: absolute;
-    transition: all 0.07s linear 0s;
-}
-
 @media screen and (max-width: 480px) {
     .sending-form input {
         width: 100%;
