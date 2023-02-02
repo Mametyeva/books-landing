@@ -65,7 +65,6 @@ form.addEventListener('submit', function(evt) {
   list.appendChild(youTemplate);
   input.value = '';
 });
-<<<<<<< HEAD
 
 // Vue
 
@@ -131,5 +130,3 @@ const Counter = {
 };
   
   Vue.createApp(Counter).mount('#counter')
-=======
->>>>>>> 9b7a7c92d22ff7c95cdcbc9e9ead59f2c4e5d051
