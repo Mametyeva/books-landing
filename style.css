@@ -65,7 +65,7 @@ input {
     background: none;
     border: none;
     outline: none;
-    border-bottom: 1px solid #CDCDCD;
+    border-bottom: 1px solid #3D3D3D;
 }
 
 a {
@@ -84,6 +84,10 @@ p {
 }
 
 p a {
+    color: #0e9769;
+}
+
+p a:hover {
     color: #3BB78E;
 }
 
@@ -341,16 +345,21 @@ header nav span {
 
 .seach button {
     width: 36px;
-    height: auto;
+    height: 36px;
     margin-left: 20px;
     border: none;
 }
 
-button img {
+.button-search {
+    background: url(img/search.svg) no-repeat center center;
     margin: auto;
     width: 100%;
     height: 100%;
     vertical-align: bottom;
+}
+
+.button-search:hover {
+    background: url(img/search2.svg) no-repeat center center;
 }
 
 .block-bg {
@@ -638,7 +647,8 @@ footer > p {
     display: block;
     text-align: center;
     line-height: 16px;
-    color: #6994ba;
+    color: #3BB78E;
+    font-size: 14px;
 }
 
 .chat-form {
@@ -667,20 +677,6 @@ footer > p {
 
 .chat-photo img {
     border-radius: 5px;
-}
-
-.button-wrapper {
-    height: 300px;
-    padding: 50px;
-    border: 1px solid grey;
-    box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    position: relative;
-}
-
-#my-button {
-    position: absolute;
-    transition: all 0.07s linear 0s;
 }
 
 @media screen and (max-width: 480px) {

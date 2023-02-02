@@ -66,37 +66,67 @@ form.addEventListener('submit', function(evt) {
   input.value = '';
 });
 
-// function getRandomInt(min, max) {
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-// function newPosition (oldTop, oldLeft, width, height) {
-//     var range = 2; // Тут выставьте свой минимальный диапазон дальности
-//     var newTop = getRandomInt(0, height);
-//     var newLeft = getRandomInt(0, width);
-//     if ( ((oldTop-range)<newTop && (oldTop+range)>newTop) ||
-//          ((oldLeft-range)<newLeft && (oldLeft+range)>newLeft)) 
-//        return newPosition (oldTop, oldLeft, width, height);
-//     else return [newTop, newLeft];
-// }
-// $("#my-button").hover(function () {
-//     var buttonPosition = newPosition ( 
-//         parseInt($(this).css("top")), 
-//         parseInt($(this).css("left")), 
-//         $(".button-wrapper").width(), 
-//         $(".button-wrapper").height() 
-//     );
-//     $(this).css({
-//         top: buttonPosition[0],
-//         left: buttonPosition[1]
-//     });
-// }, function () { });
+// Vue
 
+const goods = {
+    data() {
+        return {
+            books: [
+                {
+                    name: 'Портрет Дориана Грея',
+                    author: 'Оскар Уаильд',
+                    img: 'content/Dorian-Gray 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Айвенго',
+                    author: 'Вальтер Скотт',
+                    img: 'content/Ayvengo 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Мастер и Маргарита',
+                    author: 'Булгаков М.А.',
+                    img: 'content/Master-i-Margarita 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: true
+                },
+            
+                {
+                    name: 'Маленький принц',
+                    author: 'Антуан де-Сент Экзюпери',
+                    img: 'content/Little-Prince 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Список Шиндлера',
+                    author: 'Томас Кенилли',
+                    img: 'content/Spisok-Shindlera 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            ],
+        }
+    }
+};
 
-
-// второй вариант
-$(document).on('mousemove', function (e) {
-    $('#my-button').css({
-        marginLeft: -e.pageX / 100 + 20,
-        marginTop: -e.pageY / 100 + 20
-    })
-})
+const Counter = {
+    data() {
+      return {
+        counter: 0
+      }
+    }
+};
+  
+  Vue.createApp(Counter).mount('#counter')
