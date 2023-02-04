@@ -65,3 +65,68 @@ form.addEventListener('submit', function(evt) {
   list.appendChild(youTemplate);
   input.value = '';
 });
+
+// Vue
+
+const goods = {
+    data() {
+        return {
+            books: [
+                {
+                    name: 'Портрет Дориана Грея',
+                    author: 'Оскар Уаильд',
+                    img: 'content/Dorian-Gray 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Айвенго',
+                    author: 'Вальтер Скотт',
+                    img: 'content/Ayvengo 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Мастер и Маргарита',
+                    author: 'Булгаков М.А.',
+                    img: 'content/Master-i-Margarita 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: true
+                },
+            
+                {
+                    name: 'Маленький принц',
+                    author: 'Антуан де-Сент Экзюпери',
+                    img: 'content/Little-Prince 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            
+                {
+                    name: 'Список Шиндлера',
+                    author: 'Томас Кенилли',
+                    img: 'content/Spisok-Shindlera 1.jpg',
+                    cost: 350,
+                    sale: true,
+                    russian: false
+                },
+            ],
+        }
+    }
+};
+
+const Counter = {
+    data() {
+      return {
+        counter: 0
+      }
+    }
+};
+  
+  Vue.createApp(Counter).mount('#counter')

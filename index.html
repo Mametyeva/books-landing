@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="">
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   <body>
     <header>
@@ -103,7 +104,7 @@
         <h2 class="box">Все книги серии</h2>
         <form class="seach line">
           <input class="caption" type="text" placeholder="Введите название или имя автора">
-          <button type="button"><img src="img/search.svg"></button>
+          <button class="button-search" type="button"></button>
         </form>
         <div class="cards">
           <div class="card col-between">
@@ -147,7 +148,49 @@
             <button class="card-btn">Купить</button>
           </div>
         </div>
+        
+        <!---- пробный блок -->
+        <div id="goods" class="cards">
+        </div>
+        
       </section>
+
+      <div id="counter">
+        Счётчик: {{ counter }}
+      </div>
+
+      <div class="itc-slider" data-slider="itc-slider">
+        <div class="itc-slider__wrapper">
+          <div class="itc-slider__items">
+            <div class="itc-slider__item">
+              <div class="card col-between">
+                <div class="card-img"><img class="photo" src="content/Dorian-Gray 1.jpg" alt="Портрет Дориана Грея" /></div>
+                <p class="card-name subtitle">Портрет Дориана Грея</p>
+                <p class="card-autor caption">Булгаков М.А.</p>
+                <div class="price line">
+                  <p class="old-price caption">350p</p>
+                  <p class="value-price">300p</p>
+                </div>
+            </div>
+            </div>
+            <div class="itc-slider__item">
+              <!-- Контент 2 слайда -->
+            </div>
+            <div class="itc-slider__item">
+              <!-- Контент 3 слайда -->
+            </div>
+          </div>
+        </div>
+        <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+        <button class="itc-slider__btn itc-slider__btn_prev"></button>
+        <button class="itc-slider__btn itc-slider__btn_next"></button>
+        
+        <ol class="itc-slider__indicators">
+          <li class="itc-slider__indicator" data-slide-to="0"></li>
+          <li class="itc-slider__indicator" data-slide-to="1"></li>
+          <li class="itc-slider__indicator" data-slide-to="2"></li>
+        </ol>
+      </div>
 
       <section class="modal">
         <div class="modal-content box line">
@@ -186,7 +229,7 @@
           <div class="chat-content">
             <div class="chat-message" tabindex="0">
               <div>
-                <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+                <div class="chat-photo"><img src="content/people2.jpg" alt="аватар"></div>
                 <span class="chat-message-name caption">Мария</span>
               </div>
               <p class="chat-message-text">Такую книгу сразу хочется читать и не отрываться, прочла Войну и Мир на одном дыхании,
@@ -194,14 +237,14 @@
             </div>
             <div class="chat-message" tabindex="0">
               <div>
-                <div class="chat-photo"><img src="img/cristal.svg" alt="аватар"></div>
+                <div class="chat-photo"><img src="content/people1.jpg" alt="аватар"></div>
                 <span class="chat-message-name caption">Виктория</span>
               </div>
               <p class="chat-message-text">Отличная серия, побольше бы таких книг! Теперь на другие издания даже не смотрю.</p>
             </div>
             <div class="chat-message" tabindex="0">
               <div>
-                <div class="chat-photo"><img src="img/human.svg" alt="аватар"></div>
+                <div class="chat-photo"><img src="img/human.jpg" alt="аватар"></div>
                 <span class="chat-message-name caption">Гость</span>
               </div>
               <p class="chat-message-text">Хорошие книжки. В соотношении цена-качество, лучше, думаю, не найти.</p>
@@ -217,7 +260,7 @@
       <template id="message-template">
         <div class="chat-message" tabindex="0">
           <div>
-            <div class="chat-photo"><img src="img/human.svg" alt="аватар"></div>
+            <div class="chat-photo"><img src="img/human.jpg" alt="аватар"></div>
             <span class="chat-message-name caption">Гость</span>
           </div>
           <p class="chat-message-text"></p>
@@ -229,17 +272,19 @@
         <div>
           <h2>Контакты</h2>
           <p>Новосибирск, ул.Мичурина 13, 1 эт.</p>
-          <p>+7 999 999 99 99</p>
+          <p>+7 (999) 999-99-99</p>
           <p>пн-пт 9 - 21ч</p>
         </div>
       </section>
 
     </main>
+
     <footer>
       <p class="box">
         Учебный лендинг
       </p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
