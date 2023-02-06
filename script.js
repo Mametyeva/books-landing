@@ -59,8 +59,8 @@ let form = document.querySelector('.chat-form');
 
 form.addEventListener('submit', function(evt) {
   evt.preventDefault();
-  var youTemplate = newMessage.cloneNode(true);
-  var youMessage = youTemplate.querySelector('p');
+  let youTemplate = newMessage.cloneNode(true);
+  let youMessage = youTemplate.querySelector('p');
   youMessage.textContent = input.value; 
   list.appendChild(youTemplate);
   input.value = '';
