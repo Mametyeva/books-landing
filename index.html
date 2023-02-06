@@ -31,11 +31,11 @@
           </ul>
           <ul class="menu-items">
             <li><a href="#">Главная</a></li>
-            <li><a href="#catalog">Не главная</a></li>
-            <li><a href="#contakts">Почти главная</a></li>
+            <li><a href="#catalog">Товары</a></li>
+            <li><a href="#contakts">Контакты</a></li>
           </ul>
           <ul>
-            <p class="caption">Ленинград точка ру, +7 999 999 9999</p>
+            <p class="caption">Нск, ул.Мичурина, 13</p>
           </ul>
         </div>
       </nav>
@@ -159,7 +159,7 @@
         Счётчик: {{ counter }}
       </div>
 
-      <div class="itc-slider" data-slider="itc-slider">
+      <div class="itc-slider box" data-slider="itc-slider">
         <div class="itc-slider__wrapper">
           <div class="itc-slider__items">
             <div class="itc-slider__item">
@@ -230,24 +230,30 @@
             <div class="chat-message" tabindex="0">
               <div>
                 <div class="chat-photo"><img src="content/people2.jpg" alt="аватар"></div>
-                <span class="chat-message-name caption">Мария</span>
               </div>
-              <p class="chat-message-text">Такую книгу сразу хочется читать и не отрываться, прочла Войну и Мир на одном дыхании,
-                все благодаря удобному шрифту и приятным страницам (не проплаченный отзыв)</p>
+              <div class="chat-message-text">
+                <span class="chat-message-name caption">Мария</span>
+                <p>Такую книгу сразу хочется читать и не отрываться, прочла Войну и Мир на одном дыхании,
+                  все благодаря удобному шрифту и приятным страницам (не проплаченный отзыв)</p>
+              </div>
             </div>
             <div class="chat-message" tabindex="0">
               <div>
                 <div class="chat-photo"><img src="content/people1.jpg" alt="аватар"></div>
-                <span class="chat-message-name caption">Виктория</span>
               </div>
-              <p class="chat-message-text">Отличная серия, побольше бы таких книг! Теперь на другие издания даже не смотрю.</p>
+              <div class="chat-message-text">
+                <span class="chat-message-name caption">Виктория</span>
+                <p>Отличная серия, побольше бы таких книг! Теперь на другие издания даже не смотрю.</p>
+              </div>
             </div>
             <div class="chat-message" tabindex="0">
               <div>
                 <div class="chat-photo"><img src="img/human.jpg" alt="аватар"></div>
-                <span class="chat-message-name caption">Гость</span>
               </div>
-              <p class="chat-message-text">Хорошие книжки. В соотношении цена-качество, лучше, думаю, не найти.</p>
+              <div class="chat-message-text">
+                <span class="chat-message-name caption">Гость</span>
+                <p>Хорошие книжки. В соотношении цена-качество, лучше, думаю, не найти.</p>
+              </div>
             </div>
           </div>
           <form class="chat-form line" action="" method="post">
@@ -261,9 +267,11 @@
         <div class="chat-message" tabindex="0">
           <div>
             <div class="chat-photo"><img src="img/human.jpg" alt="аватар"></div>
-            <span class="chat-message-name caption">Гость</span>
           </div>
-          <p class="chat-message-text"></p>
+          <div class="chat-message-text">
+            <span class="chat-message-name caption">Гость</span>
+            <p></p>
+          </div>
         </div>
       </template>
 
@@ -285,5 +293,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="itc-slider.js"></script>
   </body>
 </html>
