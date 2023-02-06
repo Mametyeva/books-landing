@@ -118,7 +118,7 @@ const goods = {
                 },
             ],
         }
-    }
+    },
 };
 
 const Counter = {
